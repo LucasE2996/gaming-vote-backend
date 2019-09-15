@@ -22,6 +22,6 @@ server.use(cors());
 server.use(express.json());
 server.use(routes);
 
-const port = 3333;
+const port = process.env.PORT || 3333;
 console.log('\x1b[34m%s\x1b[0m', `Listening on port ${port}`);
 server.listen(port);
